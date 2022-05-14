@@ -1,28 +1,19 @@
 import { useState } from "react";
 import AddCategory from "./components/AddCategory";
+import GiftGrid from "./components/GiftGrid";
 
 const GiftExperApp = () => {
-  const [categorias, setCategorias] = useState([
-    "One Punch",
-    "Samurai X",
-    "Dragon Ball",
-  ]);
-
-  //const handleAdd = () => {
-  //    //setCategorias(["HunterXHunter", ...categorias]);
-  //setCategorias((cats) => [...cats, "HunterXHunter"]);
-  //};
+  const [categorias, setCategorias] = useState(["One Punch"]);
 
   return (
     <>
       <h2>GiftExperApp</h2>
-      <AddCategory />
+      <AddCategory setCategorias={setCategorias} />
       <hr />
-
       <ol>
-        {categorias.map((categoria) => {
-          return <li key={categoria}>{categoria}</li>;
-        })}
+        {categorias.map((categoria) => (
+          <GiftGrid key={categoria} categoria={categoria} />
+        ))}
       </ol>
     </>
   );
