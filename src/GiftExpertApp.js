@@ -4,6 +4,7 @@ import GiftGrid from "./components/GiftGrid";
 
 const GiftExperApp = () => {
   const [categorias, setCategorias] = useState(["One Punch"]);
+  console.log({ setCategorias });
 
   return (
     <>
