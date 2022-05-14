@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import GiftGridItem from "./GiftGridItem";
 
 const GiftGrid = ({ categoria }) => {
-  const [count, setCount] = useState(0);
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     getGifts();
@@ -20,13 +21,16 @@ const GiftGrid = ({ categoria }) => {
       };
     });
     console.log(gifs);
+    setImages(gifs);
   };
 
   return (
     <div>
       <h3>{categoria}</h3>
-      <h3>{count}</h3>
-      <button onClick={() => setCount(count + 1)}></button>
+
+      {images.map((img) => (
+        <GiftGridItem key={img.id} {...img} />
+      ))}
     </div>
   );
 };
