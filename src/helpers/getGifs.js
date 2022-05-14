@@ -1,4 +1,4 @@
-export const getGifts = async (categoria) => {
+export const getFetchGifts = async (categoria) => {
   const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(
     categoria
   )}&limit=10&api_key=1rWd6kNTUtqzKl7v7W6EQZmshL9EFmNf`;

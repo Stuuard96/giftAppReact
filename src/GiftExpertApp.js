@@ -11,7 +11,6 @@ const GiftExperApp = () => {
       <h1 className="padd-15">Aplicación REACT Gift Apis</h1>
       <AddCategory setCategorias={setCategorias} />
       <hr className="padd-15" />
-
       {categorias.map((categoria) => (
         <GiftGrid key={categoria} categoria={categoria} />
       ))}
