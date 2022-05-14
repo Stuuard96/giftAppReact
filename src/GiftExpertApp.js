@@ -3,19 +3,18 @@ import AddCategory from "./components/AddCategory";
 import GiftGrid from "./components/GiftGrid";
 
 const GiftExperApp = () => {
-  const [categorias, setCategorias] = useState(["One Punch"]);
-  console.log({ setCategorias });
+  const [categorias, setCategorias] = useState(["Dragon Ball"]);
+  /* console.log({ setCategorias }); */
 
   return (
     <>
-      <h2>GiftExperApp</h2>
+      <h1 className="padd-15">Aplicación REACT Gift Apis</h1>
       <AddCategory setCategorias={setCategorias} />
-      <hr />
-      <ol>
-        {categorias.map((categoria) => (
-          <GiftGrid key={categoria} categoria={categoria} />
-        ))}
-      </ol>
+      <hr className="padd-15" />
+
+      {categorias.map((categoria) => (
+        <GiftGrid key={categoria} categoria={categoria} />
+      ))}
     </>
   );
 };

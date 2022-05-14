@@ -17,8 +17,9 @@ const AddCategory = ({ setCategorias }) => {
   };
 
   return (
-    <form onSubmit={HandleSubmit}>
+    <form onSubmit={HandleSubmit} className="padd-15">
       <input
+        className="padd-15"
         type="text"
         value={inputValue}
         onChange={HandleInputChange}
