@@ -7,7 +7,7 @@ const GiftGrid = ({ categoria }) => {
 
   return (
     <>
-      <h3 className="animate__animated animate__fadeInpadd-15">{categoria}</h3>
+      <h3 className="animate__animated animate__fadeIn padd-15">{categoria}</h3>
       {loading && (
         <p className="animate__animated  animate__flash padd-15">Loading</p>
       )}
